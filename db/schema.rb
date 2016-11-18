@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20161117232113) do
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
-  create_table "posts", force: :cascade do |t|
+  create_table "sponsoredposts", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
     t.datetime "created_at", null: false
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20161117232113) do
     t.integer  "topic_id"
   end
 
-  add_index "posts", ["topic_id"], name: "index_posts_on_topic_id"
+  add_index "sponsoredposts", ["topic_id"], name: "index_posts_on_topic_id"
 
   create_table "questions", force: :cascade do |t|
     t.string   "title"
