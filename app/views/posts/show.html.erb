@@ -13,9 +13,9 @@
       <%= render @post.comments %>
     </div>
     <% if current_user %>
-<!-- #20 -->
-  <%= render 'comments/form', comment: Comment.new, post: @post %>
-<% end %>
+    <!-- #20 -->
+    <%= render 'comments/form', comment: Comment.new, post: @post %>
+    <% end %>
   </div>
   <% if user_is_authorized_for_post?(@post) %>
   <div class="col-md-4">
